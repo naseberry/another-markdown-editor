@@ -1,0 +1,29 @@
+{
+  "name": "ame",
+  "productName": "A.M.E",
+  "version": "1.0.0",
+  "description": "Another Markdown Editor or AME",
+  "main": "src/js/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naseberry/another-markdown-editor.git"
+  },
+  "keywords": [
+    "Markdown",
+    "Electron",
+    "SimpleMDE"
+  ],
+  "author": "Peter Hunt <naseberry@users.noreply.github.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naseberry/another-markdown-editor/issues"
+  },
+  "homepage": "https://github.com/naseberry/another-markdown-editor#readme",
+  "devDependencies": {
+    "electron": "^2.0.3",
+    "simplemde": "^1.11.2"
+  }
+}
