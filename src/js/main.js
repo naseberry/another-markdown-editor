@@ -1,7 +1,9 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
+
+const customMenu = require('./menu');
 
 let mainWindow;
 
@@ -29,5 +31,10 @@ app.on('ready', () => {
     mainWindow = null;
     app.quit();
   });
+
+
+  // Remove default menu, add our custom menu
+  mainWindow.setMenu(null);
+  customMenu.ameMenu();
 
 });
