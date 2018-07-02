@@ -11,8 +11,10 @@ app.on('ready', () => {
 
   // Create new window
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1280,
+    height: 720,
+    minWidth: 800,
+    minHeight: 600,
     title: 'A.M.E',
     javascript: true
   });
