@@ -1,9 +1,8 @@
 const {app, BrowserWindow, Menu} = require('electron');
-const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
-const customMenu = require('./menu');
+const customMenu = require('./src/js/menu');
 
 let mainWindow;
 
@@ -16,13 +15,14 @@ app.on('ready', () => {
     minWidth: 800,
     minHeight: 600,
     title: 'A.M.E',
+    icon: path.join(__dirname, 'src/icon/app.png'),
     javascript: true
   });
 
 
   // Load html in window
   mainWindow.loadURL(url.format({
-    pathname: path.join(process.cwd(), 'src/index.html'),
+    pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }));
