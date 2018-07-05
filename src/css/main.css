@@ -1,17 +1,16 @@
 body {
   /* base font for, MacOS, Windows, Ubuntu, most Linux, fallbacks */
   font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, Arial, sans-serif;
-}
-
-* {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-.editor-toolbar {
+.editor-toolbar,
+.editor-statusbar {
   border-radius: 0;
 }
 
 .CodeMirror {
-  height: calc(100vh - (49px + 34px));
+  height: calc(100vh - 110px);
 }
