@@ -1,4 +1,4 @@
-const {app, Menu, shell} = require('electron');
+const {BrowserWindow, Menu, shell} = require('electron');
 let mainWindow;
 
 exports.ameMenu = () => {
@@ -12,7 +12,7 @@ exports.ameMenu = () => {
           label: 'New',
           click: (item, focusedWindow) => {
             if (focusedWindow) {
-              // new file
+              focusedWindow.webContents.send('file-new');
             }
           },
           accelerator: 'CmdOrCtrl+N'
@@ -24,7 +24,7 @@ exports.ameMenu = () => {
           label: 'Open',
           click: (item, focusedWindow) => {
             if (focusedWindow) {
-              // open and load file
+              focusedWindow.webContents.send('file-open');
             }
           },
           accelerator: 'CmdOrCtrl+O',
@@ -37,7 +37,7 @@ exports.ameMenu = () => {
           label: 'Save',
           click: (item, focusedWindow) => {
             if (focusedWindow) {
-              // save file if exists else run save as
+              focusedWindow.webContents.send('file-save');
             }
           },
           accelerator: 'CmdOrCtrl+S',
@@ -47,7 +47,7 @@ exports.ameMenu = () => {
           label: 'Save as',
           click: (item, focusedWindow) => {
             if (focusedWindow) {
-              // save a new file
+              focusedWindow.webContents.send('file-save-as');
             }
           },
           accelerator: 'CmdOrCtrl+Shift+S',
