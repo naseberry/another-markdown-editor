@@ -33,7 +33,6 @@
   "devDependencies": {
     "electron": "^2.0.3",
     "electron-packager": "^11.2.0",
-    "electron-reload": "^1.2.5",
     "npm-run-all": "^4.1.3"
   }
 }

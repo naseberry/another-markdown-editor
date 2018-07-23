@@ -1,7 +1,6 @@
 const {app, BrowserWindow, Menu, remote} = require('electron');
 const path = require('path');
 const url = require('url');
-require('electron-reload')(__dirname);
 const customMenu = require('./src/js/menu');
 
 let mainWindow;
