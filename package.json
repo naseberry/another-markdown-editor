@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/naseberry/another-markdown-editor#readme",
   "devDependencies": {
-    "electron": "^18.0.4",
+    "electron": "^19.0.4",
     "electron-packager": "^15.1.0",
     "npm-run-all": "^4.1.3"
   }
